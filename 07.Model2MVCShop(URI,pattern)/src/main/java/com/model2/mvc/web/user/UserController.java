@@ -52,7 +52,7 @@ public class UserController {
 		
 		return "redirect:/user/addUserView.jsp";
 	}
-	
+
 	//@RequestMapping("/addUser.do")
 	@RequestMapping( value="addUser", method=RequestMethod.POST )
 	public String addUser( @ModelAttribute("user") User user ) throws Exception {
@@ -63,6 +63,13 @@ public class UserController {
 		
 		return "redirect:/user/loginView.jsp";
 	}
+
+	
+	
+	////////////////////////////////////////
+	
+	
+	
 	
 	//@RequestMapping("/getUser.do")
 	@RequestMapping( value="getUser", method=RequestMethod.GET )
@@ -76,6 +83,11 @@ public class UserController {
 		
 		return "forward:/user/getUser.jsp";
 	}
+
+	
+	/////////////////////////////////////////////
+	
+	
 	
 	//@RequestMapping("/updateUserView.do")
 	//public String updateUserView( @RequestParam("userId") String userId , Model model ) throws Exception{
@@ -90,6 +102,10 @@ public class UserController {
 		
 		return "forward:/user/updateUser.jsp";
 	}
+
+	
+	////////////////////////////////////////////////
+	
 	
 	//@RequestMapping("/updateUser.do")
 	@RequestMapping( value="updateUser", method=RequestMethod.POST )
@@ -158,6 +174,8 @@ public class UserController {
 
 		return "forward:/user/checkDuplication.jsp";
 	}
+
+	///////////////////////////////////////////////////////////
 	
 	//@RequestMapping("/listUser.do")
 	@RequestMapping( value="listUser" )
