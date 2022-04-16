@@ -58,10 +58,11 @@ public class ProductController {
 		System.out.println("/product/addProduct : GET");
 		
 		return "forward:/product/addProductView.jsp";
+//		return "redirect:/product/addProductView.jsp";
 	}
 	
 
-///////////////////////////////////////////////
+
 //	@RequestMapping("/addProduct.do")
 	@RequestMapping( value="addProduct", method=RequestMethod.POST )
 	public String addProduct( @ModelAttribute("product") Product product, 
@@ -78,6 +79,7 @@ public class ProductController {
 
 //////////////////////////////////////////		
 		return "forward:/product/addProductView.jsp";
+//		return "redirect:/product/addProductView.jsp";
 		
 		//이게 어디로 가면 좋을까 forward를 쓰는게 맞는듯
 /////////////////////////////////////////
@@ -120,6 +122,8 @@ public class ProductController {
 		model.addAttribute("product", product);
 		
 		return "forward:/product/updateProductView.jsp";
+//		return "redirect:/product/updateProduct.jsp"; 
+		//이렇게 하니 상품수정 버튼이 안눌러짐 => 경로가 updateProduct여기로 갔다가 거기에 있는 fncupdate를 받게 됨
 	}
 	
 	////////////////////////////////////////////////
