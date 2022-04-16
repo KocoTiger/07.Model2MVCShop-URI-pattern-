@@ -124,6 +124,9 @@ public class UserController {
 		return "redirect:/user/getUser?userId="+user.getUserId();
 	}
 	
+	
+	
+	
 	//@RequestMapping("/loginView.do")
 	//public String loginView() throws Exception{
 	@RequestMapping( value="login", method=RequestMethod.GET )
@@ -176,6 +179,9 @@ public class UserController {
 	}
 
 	///////////////////////////////////////////////////////////
+	
+	
+	
 	
 	//@RequestMapping("/listUser.do")
 	@RequestMapping( value="listUser" )
